@@ -1,0 +1,4 @@
+# Node や VSCode の一時ファイルなど（今は最低限）
+node_modules/
+.vscode/
+.DS_Store

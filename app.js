@@ -1,3 +1,4 @@
+HEAD
 document.addEventListener('DOMContentLoaded', () => {
   const menuButtons = document.querySelectorAll('.menu-btn');
   const sections = document.querySelectorAll('.section');
@@ -32,3 +33,34 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('recipe-list').classList.add('active');
   });
 });
+
+// とても簡単なフロントロジック（学習用）
+const recipesEl = document.getElementById('recipes');
+const titleInput = document.getElementById('title');
+const addBtn = document.getElementById('addBtn');
+
+// サンプル初期データ
+let recipes = [
+  { id: 1, title: 'トマトスープ' },
+  { id: 2, title: '簡単オムレツ' }
+];
+
+function render() {
+  recipesEl.innerHTML = '';
+  recipes.forEach(r => {
+    const li = document.createElement('li');
+    li.textContent = r.title;
+    recipesEl.appendChild(li);
+  });
+}
+
+addBtn.addEventListener('click', () => {
+  const t = titleInput.value.trim();
+  if (!t) return alert('タイトルを入力してください');
+  recipes.push({ id: Date.now(), title: t });
+  titleInput.value = '';
+  render();
+});
+
+render();
+14c5ead (VSCodeで作成したファイルを統合)
