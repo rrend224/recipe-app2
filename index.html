@@ -3,26 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Recipe App - 初期ページ</title>
+  <title>recipe memory</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Recipe App</h1>
+    <h1>recipe memory</h1>
     <p>学習用プロジェクト：レシピ一覧を作ります</p>
   </header>
 
-  <main id="app">
-    <section id="recipe-list">
-      <h2>レシピ一覧</h2>
-      <ul id="recipes"></ul>
-    </section>
-    <section id="add-recipe">
-      <h2>レシピを追加</h2>
-      <input id="title" placeholder="タイトル" />
-      <button id="addBtn">追加</button>
-    </section>
-  </main>
+  <div class="container">
+    <!-- 左メニュー -->
+    <nav class="side-menu">
+      <button class="menu-btn" data-target="add-recipe">レシピ追加</button>
+      <button class="menu-btn" data-target="recipe-list">レシピ一覧</button>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main id="app">
+      <section id="add-recipe" class="section">
+        <h2>レシピを追加</h2>
+        <input id="title" placeholder="タイトル" />
+        <button id="addBtn">追加</button>
+      </section>
+
+      <section id="recipe-list" class="section">
+        <h2>レシピ一覧</h2>
+        <ul id="recipes"></ul>
+      </section>
+    </main>
+  </div>
 
   <script src="app.js"></script>
 </body>
