@@ -1,0 +1,69 @@
+/* 全体 */
+body {
+  margin: 0;
+  font-family: 'Yu Gothic', sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* ヘッダー */
+header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* コンテナ */
+.container {
+  display: flex;
+  height: calc(100vh - 100px);
+}
+
+/* 左メニュー */
+.side-menu {
+  width: 200px;
+  background-color: #f0f0f0;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.side-menu .menu-btn {
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  text-align: left;
+}
+
+.side-menu .menu-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* メイン */
+main#app {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* セクションの非表示 */
+.section {
+  display: none;
+}
+
+/* 表示用クラス */
+.section.active {
+  display: block;
+}
+
+/* 入力とボタン */
+#add-recipe input {
+  padding: 5px;
+  margin-right: 5px;
+}
+#add-recipe button {
+  padding: 5px 10px;
+}
