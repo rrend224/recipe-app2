@@ -3,37 +3,66 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>recipe memory</title>
+  <title>Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>recipe memory</h1>
-    <p>学習用プロジェクト：レシピ一覧を作ります</p>
-  </header>
+<header>
+<nav class="nav">
+<strong>Portfolio</strong>
+<ul>
+<li><a href="#top">Top</a></li>
+<li><a href="#works">Works</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+</nav>
+</header>
 
-  <div class="container">
-    <!-- 左メニュー -->
-    <nav class="side-menu">
-      <button class="menu-btn" data-target="add-recipe">レシピ追加</button>
-      <button class="menu-btn" data-target="recipe-list">レシピ一覧</button>
-    </nav>
 
-    <!-- メインコンテンツ -->
-    <main id="app">
-      <section id="add-recipe" class="section">
-        <h2>レシピを追加</h2>
-        <input id="title" placeholder="タイトル" />
-        <button id="addBtn">追加</button>
-      </section>
+<main>
+<section id="top">
+<h1>シンプルで、伝わるものを。</h1>
+<p>
+Webサイト制作を中心に、UI/UXを意識したデザインと実装を行っています。
+情報を整理し、無駄を省き、本質が伝わる構成を大切にしています。
+</p>
+</section>
 
-      <section id="recipe-list" class="section">
-        <h2>レシピ一覧</h2>
-        <ul id="recipes"></ul>
-      </section>
-    </main>
-  </div>
 
-  <script src="app.js"></script>
+<section id="works">
+<h2>Works</h2>
+<div class="works">
+<div class="work">
+<h3>Project Title</h3>
+<p>コーポレートサイト / HTML・CSS・JavaScript</p>
+</div>
+<div class="work">
+<h3>Project Title</h3>
+<p>LP制作 / レスポンシブ対応</p>
+</div>
+<div class="work">
+<h3>Project Title</h3>
+<p>デザイン・コーディング</p>
+</div>
+</div>
+</section>
+
+
+<section id="about">
+<h2>About</h2>
+<p>
+Web制作を通じて、クライアントやユーザーにとって「使いやすく、わかりやすい」体験を提供することを目指しています。
+デザインだけでなく、構造や保守性にも配慮したコーディングを行います。
+</p>
+</section>
+</main>
+
+
+<footer>
+© Portfolio
+</footer>
+
+
+<script src="js/main.js"></script>
 </body>
 </html>
