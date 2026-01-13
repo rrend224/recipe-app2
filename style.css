@@ -7,11 +7,8 @@
   --text-sub: #555;
 }
 
-.yuji-mai-regular {
-  font-family: "Yuji Mai", serif;
-  font-weight: 400;
-  font-style: normal;
-}
+body { font-family: 'Inter', sans-serif; }
+
 
 
 * {
@@ -196,6 +193,7 @@ header {
   line-height: 1.9;
   color: var(--text-main);
 }
+
 
 
 
