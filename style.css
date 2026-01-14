@@ -170,3 +170,67 @@ header {
   line-height: 2.1;
   color: var(--text-main);
 }
+
+/* ------------------------------
+  Custom Cursor
+------------------------------ */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--green-main);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform .15s ease-out, opacity .3s;
+  z-index: 9999;
+}
+
+a:hover ~ .cursor,
+button:hover ~ .cursor {
+  transform: translate(-50%, -50%) scale(1.8);
+}
+
+/* ------------------------------
+  Hero Enhancement
+------------------------------ */
+.hero {
+  position: relative;
+  padding: 160px 0 120px;
+  overflow: hidden;
+}
+
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 2;
+}
+
+/* 背景の流れる英字 */
+.hero-bg-text {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 200%;
+  display: flex;
+  gap: 80px;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: rgba(31, 94, 59, 0.08);
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+  z-index: 1;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
