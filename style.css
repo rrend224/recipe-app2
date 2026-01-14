@@ -140,3 +140,28 @@ header {
 .cursor.is-hover {
   transform: translate(-50%, -50%) scale(1.8);
 }
+
+.vertical-ui {
+  position: fixed;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  color: #0f3d2e; /* 濃い緑 */
+  position: relative;
+}
+
+.vertical-text::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 80px;
+  background: #0f3d2e;
+  margin: 16px auto 0;
+}
