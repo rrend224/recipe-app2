@@ -7,9 +7,7 @@
   --text-sub: #555;
 }
 
-/* ------------------------------
-  Base
------------------------------- */
+/* Base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,7 +15,7 @@
 }
 
 body {
-  font-family: 'Inter', 'Noto Sans JP', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--gray-bg);
   color: var(--text-main);
   font-size: 16px;
@@ -25,52 +23,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* ------------------------------
-  Typography
------------------------------- */
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.4rem, 5vw, 3.2rem);
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: 0.01em;
-  color: var(--green-main);
-  margin-bottom: 24px;
-}
-
-h2 {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 32px;
-}
-
-p {
-  font-size: 0.95rem;
-  line-height: 2;
-  letter-spacing: 0.03em;
-  max-width: 620px;
-  color: var(--text-sub);
-}
-
-/* ------------------------------
-  Layout
------------------------------- */
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 80px 24px;
-}
-
-section {
-  margin-bottom: 120px;
-}
-
-/* ------------------------------
-  Header / Nav
------------------------------- */
+/* Header / Nav */
 header {
   background: #fff;
   border-bottom: 1px solid var(--gray-border);
@@ -104,8 +57,8 @@ header {
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--text-main);
   text-decoration: none;
+  color: var(--text-main);
 }
 
 .nav a:hover,
@@ -113,102 +66,36 @@ header {
   color: var(--green-main);
 }
 
-/* ------------------------------
-  Hero
------------------------------- */
+/* Hero */
 .hero {
-  padding: 120px 0 80px;
+  position: relative;
+  padding: 160px 24px 120px;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--green-main);
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero p {
   max-width: 560px;
   font-size: 1rem;
   line-height: 2;
-}
-
-/* ------------------------------
-  Works
------------------------------- */
-.works {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
-}
-
-.work {
-  background: #fff;
-  padding: 32px;
-  border-radius: 10px;
-  border: 1px solid var(--gray-border);
-  transition: transform .3s, box-shadow .3s;
-}
-
-.work:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0,0,0,.08);
-}
-
-.work h3 {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--green-main);
-  margin-bottom: 12px;
-}
-
-/* ------------------------------
-  About
------------------------------- */
-.about {
-  background: var(--green-soft);
-  padding: 72px;
-  border-radius: 16px;
-}
-
-.about p {
-  font-size: 1rem;
-  line-height: 2.1;
-  color: var(--text-main);
-}
-
-/* ------------------------------
-  Custom Cursor
------------------------------- */
-.cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--green-main);
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: transform .15s ease-out, opacity .3s;
-  z-index: 9999;
-}
-
-a:hover ~ .cursor,
-button:hover ~ .cursor {
-  transform: translate(-50%, -50%) scale(1.8);
-}
-
-/* ------------------------------
-  Hero Enhancement
------------------------------- */
-.hero {
-  position: relative;
-  padding: 160px 0 120px;
-  overflow: hidden;
-}
-
-.hero h1,
-.hero p {
+  color: var(--text-sub);
   position: relative;
   z-index: 2;
 }
 
-/* 背景の流れる英字 */
+/* Flowing background text */
 .hero-bg-text {
   position: absolute;
   top: 30%;
@@ -227,10 +114,29 @@ button:hover ~ .cursor {
 }
 
 @keyframes marquee {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
+  to {
     transform: translateX(-50%);
   }
+}
+
+/* Custom cursor */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--green-main);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform .15s ease-out;
+  z-index: 9999;
+}
+
+.cursor.is-hover {
+  transform: translate(-50%, -50%) scale(1.8);
 }
