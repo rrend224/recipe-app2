@@ -1,16 +1,14 @@
 const cursor = document.querySelector('.cursor');
-const hoverTargets = document.querySelectorAll('a, button');
 
 document.addEventListener('mousemove', (e) => {
-  cursor.style.top = e.clientY + 'px';
-  cursor.style.left = e.clientX + 'px';
+  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
 });
 
-hoverTargets.forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.classList.add('is-hover');
+document.querySelectorAll('a').forEach(link => {
+  link.addEventListener('mouseenter', () => {
+    cursor.style.transform += ' scale(2)';
   });
-  el.addEventListener('mouseleave', () => {
-    cursor.classList.remove('is-hover');
+  link.addEventListener('mouseleave', () => {
+    cursor.style.transform = cursor.style.transform.replace(' scale(2)', '');
   });
 });
