@@ -3,18 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>recipe-app2</title>
+  <title>Portfolio</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+<!-- カーソル -->
+<div class="cursor"></div>
+
+<!-- 左固定の縦UI -->
+<div class="vertical-ui">
+  <span class="vertical-text">PORTFOLIO</span>
+</div>
+
+<!-- 右側 縦に流れる英字 -->
+<div class="vertical-marquee">
+  <p>CREATIVE DEVELOPER</p>
+</div>
+
 <header>
-  
   <nav class="nav">
     <strong class="logo">Portfolio</strong>
     <ul>
@@ -25,29 +36,16 @@
   </nav>
 </header>
 
-<main>
-  <div class="vertical-ui">
-  <span class="vertical-text">PORTFOLIO</span>
-</div>
-
+<main class="main-wrapper">
   <section class="hero">
-    <div class="hero-bg-text">
-      <span>WEB DESIGN / FRONTEND / UI UX</span>
-      <span>WEB DESIGN / FRONTEND / UI UX</span>
-    </div>
-
     <h1>シンプルで、伝わるものを。</h1>
     <p>
-      Webサイト制作を中心に、UI/UXを意識した
-      設計と実装を行っています。
+      UI/UXを意識した、無駄のないWebサイト制作を行っています。
+      見た目だけでなく、使いやすさまで設計します。
     </p>
   </section>
 </main>
 
-<!-- カスタムカーソル -->
-<div class="cursor"></div>
-
-<!-- JS -->
 <script src="app.js"></script>
 </body>
 </html>
